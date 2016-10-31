@@ -1,24 +1,22 @@
-var sequelize = require('sequelize');
+var Sequelize = require('sequelize');
+
+var sequelize = new Sequelize('postgres://localhost/makersbnb_test');
 
 var Listing = sequelize.define('listing', {
-  id: {
-    type: sequelize.UUIDV1,
-    field: 'id'
-  },
   name: {
-    type: sequelize.STRING,
+    type: Sequelize.STRING,
     field: 'name'
   },
   description: {
-    type: sequelize.TEXT,
+    type: Sequelize.TEXT,
     field: 'description'
   },
   price: {
-    type: sequelize.DOUBLE,
+    type: Sequelize.INTEGER,
     field: 'field'
   },
   image: {
-    type: sequelize.STRING
+    type: Sequelize.STRING
   }
 });
 
