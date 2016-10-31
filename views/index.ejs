@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TEST page</title>
+  <title>MakersBnB</title>
 </head>
 <body>
-  This is a body
+  <h1>Listings</h1>
+  <div class="">
+    <ul>
+      <li>Listing 1
+        <div class="title">
+          <p>Amazing flat in London</p>
+        </div>
+        <div class="description">
+          <p>Three bedrooms.</p>
+        </div>
+        <div class="price">
+          <p>£50/night</p>
+        </div>
+        <div class="image">
+          <img src="">
+        </div>
+      </li>
+      <li>Listing 2</li>
+      <li>Listing 3</li>
+    </ul>
+  </div>
+
+<h1>Post a listing</h1>
+  <form class="post_listing" action="/new_listing" method="post">
+    <input type='text' value='title'>
+    <input type='text' value='description'>
+    <input type='text' value='price'>
+    <input type='image' value='image'>
+    <input type='submit' value='Save'/>
+  </form>
 </body>
 
 </html>
