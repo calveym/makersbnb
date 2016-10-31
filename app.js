@@ -8,6 +8,7 @@ var ejs = require('ejs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var listing = require('./models/listing');
 
 var app = express();
 

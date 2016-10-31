@@ -1,3 +1,5 @@
+var sequelize = require('sequelize');
+
 var Listing = sequelize.define('listing', {
   id: {
     type: sequelize.UUIDV1,
