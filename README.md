@@ -2,13 +2,13 @@
 This is a web application that allows users to rent out properties.
 
 ```
-As a signed-up owner,
+As a signed in owner,
 So that I can list my property,
 I want to be able to create a listing.
 ```
 
 ```
-As a signed up owner,
+As a signed in owner,
 So that I can list all of my properties,
 I would like to be able to list multiple places.
 ```
