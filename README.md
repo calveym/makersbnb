@@ -48,3 +48,11 @@ As a signed in user,
 So that all users can get a property,
 A space can still be booked for that night until a user confirms a booking request.
 ```
+
+Install notes:
+
+npm:
+npm install --save sequelize
+npm install --save pg pg-hstore
+npm install -g jasmine
+npm install -g express-generator
