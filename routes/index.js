@@ -6,4 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.post('/new_listing', function(req, res, next) {
+  res.render('index');
+});
+
+
+
+
+
 module.exports = router;
