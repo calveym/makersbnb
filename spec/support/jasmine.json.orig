@@ -6,11 +6,13 @@
   "helpers": [
     "helpers/**/*.js"
   ],
-
+<<<<<<< HEAD
+=======
 "src_files": [
   "../../public/javascripts/*.js"
 ],
 
+>>>>>>> origin/master
   "stopSpecOnExpectationFailure": false,
   "random": false
 }
