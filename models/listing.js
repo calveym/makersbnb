@@ -13,7 +13,7 @@ var Listing = sequelize.define('listing', {
   },
   price: {
     type: Sequelize.INTEGER,
-    field: 'field'
+    field: 'price'
   },
   image: {
     type: Sequelize.STRING
@@ -21,10 +21,11 @@ var Listing = sequelize.define('listing', {
 });
 
 Listing.sync({force:true}).then(function(){
-  return Listing.create({
-    name: 'Broadmoore Hospital',
-    description: 'the place for Jack the Ripper',
-    price: 55,
-    image: "http://www.slate.com/content/dam/slate/blogs/browbeat/2015/01/06/wesshining.jpg.CROP.promovar-mediumlarge.jpg"
-  });
+  // return Listing.create({
+  //   name: 'Broadmoore Hospital',
+  //   description: 'the place for Jack the Ripper',
+  //   price: 55,
+  //   image: "http://www.slate.com/content/dam/slate/blogs/browbeat/2015/01/06/wesshining.jpg.CROP.promovar-mediumlarge.jpg"
+  // });
 });
+ 

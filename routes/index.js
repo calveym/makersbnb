@@ -7,7 +7,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/new_listing', function(req, res, next) {
-  res.render('index');
+  Listing.create({
+    name: req.body.title,
+    description: req.body.description,
+    price: req.body.price,
+    image: req.body.image
+  });
+
+  res.rediret('/');
 });
 
 
