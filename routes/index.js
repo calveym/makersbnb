@@ -8,18 +8,31 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/new_listing', function(req, res) {
-  try {
-    var listing = Listing.create({
-      name: 'flat',
-      description: '2 bedrooms',
-      price: 45,
-      image: 'jhjhjh'
-    });
-  } catch (e) {
-  }
-
-  res.redirect('/');
+router.post('/user/create', function(req, res) {
+    models.User.create({
+    username: req.body.username,
+    email: req.body.email,
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+  });
+    res.redirect('/');
 });
+
+router.get('/new_listing', function(req, res) {
+  models.Listing.findAll({}).then(function(listings) {
+    res.json(listing);
+  });
+});
+
+router.post('/new_listing', function(req, res) {
+    models.Listing.create({
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    image: req.body.image,
+  });
+
+});
+
 
 module.exports = router;
