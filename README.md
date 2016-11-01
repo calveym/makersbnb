@@ -1,4 +1,4 @@
-##Makers bnb
+#Makers bnb
 This is a web application that allows users to rent out properties.
 
 ```
@@ -49,10 +49,13 @@ So that all users can get a property,
 A space can still be booked for that night until a user confirms a booking request.
 ```
 
-Install notes:
+##Instructions:
 
-npm:
-npm install --save sequelize
-npm install --save pg pg-hstore
-npm install -g jasmine
-npm install -g express-generator
+First, install the npm requirements:
+`npm install`
+Next, create psql databases under the names `makersbnb_development` and `makersbnb_test`.
+Ensure the db is up to date with the model:
+`node_modules/.bin/sequelize db:migrate`
+
+Finally, run the server:
+`DEBUG=express:* nodemon`
