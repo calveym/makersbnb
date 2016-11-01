@@ -30,6 +30,14 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+var models = [
+  'Listing',
+];
+
+models.forEach(function(model) {
+  module.exports[model] = sequelize.import(__dirname + '/' + model);
+});
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
