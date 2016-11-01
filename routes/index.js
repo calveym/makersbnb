@@ -13,10 +13,10 @@ router.post('/new_listing', function(req, res) {
   try {
     console.log("1");
     var listing = Listing.create({
-      name: 'flat',
-      description: '2 bedrooms',
-      price: 45,
-      image: 'jhjhjh'
+      name: req.body.listName,
+      description: req.body.listDesc,
+      price: req.body.price,
+      image: req.body.image
     });
     console.log("This runs");
   } catch (e) {
