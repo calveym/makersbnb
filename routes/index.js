@@ -9,22 +9,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/new_listing', function(req, res) {
-  console.log("type:");
   try {
-    console.log("1");
     var listing = Listing.create({
       name: 'flat',
       description: '2 bedrooms',
       price: 45,
       image: 'jhjhjh'
     });
-    console.log("This runs");
   } catch (e) {
-    console.log(e);
   }
 
   res.redirect('/');
-  console.log("gasjgal");
 });
 
 module.exports = router;
