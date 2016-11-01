@@ -1,31 +1,22 @@
-var Sequelize = require('sequelize');
+'use strict';
 
-var sequelize = new Sequelize('postgres://localhost/makersbnb_test');
-
-var Listing = sequelize.define('listing', {
-  name: {
-    type: Sequelize.STRING,
-    field: 'name'
-  },
-  description: {
-    type: Sequelize.TEXT,
-    field: 'description'
-  },
-  price: {
-    type: Sequelize.INTEGER,
-    field: 'price'
-  },
-  image: {
-    type: Sequelize.STRING
-  }
-});
-
-Listing.sync({force:true}).then(function(){
-  // return Listing.create({
-  //   name: 'Broadmoore Hospital',
-  //   description: 'the place for Jack the Ripper',
-  //   price: 55,
-  //   image: "http://www.slate.com/content/dam/slate/blogs/browbeat/2015/01/06/wesshining.jpg.CROP.promovar-mediumlarge.jpg"
-  // });
-});
- 
+module.exports = function(sequelize, DataTypes) {
+  var Listing = sequelize.define('listing', {
+    name: {
+      type: DataTypes.STRING,
+      field: 'name'
+    },
+    description: {
+      type: DataTypes.TEXT,
+      field: 'description'
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      field: 'price'
+    },
+    image: {
+      type: DataTypes.STRING
+    }
+  });
+  return Listing;
+};
