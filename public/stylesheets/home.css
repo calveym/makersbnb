@@ -1,19 +1,23 @@
-.main-content {
-  width: 20%;
-  height: 100%;
-  border-color: #bcb2b2;
-}
+<style media="screen">
 
-.content-left {
-  float: left;
-}
+  body {
+    background: url(https://static1.squarespace.com/static/55055a25e4b0e08b688db3d3/t/57cd8543d2b857343fdb8a04/1473086804160/?format=1000w) no-repeat center center fixed;
+    opacity: 0.8;
+    background-size: cover;
+  }
 
-.content-right {
-  float: right;
-  border-color: #bcb2b2;
-}
+  .main-content {
+    position: absolute;
 
-.quote {
-  color: red;
-  font-size: 3em;
-}
+  }
+
+  .content-left {
+    float: left;
+  }
+
+  .content-right {
+    float: right;
+    border-color: #bcb2b2;
+  }
+
+</style>

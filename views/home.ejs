@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html>
- <head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- <style rel="stylesheet" src="../public/stylesheets/home.css"/>
- <style>
- .main-content {
-   width: 50%;
-   height: 100%;
-   border-color: red;
- }
- </style>
-   <title>MakersBnB</title>
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
- <script>
- $(document).ready(function(){
-     var email,pass;
-     $("#submit").click(function(){
-         email=$("#email").val();
-         pass=$("#password").val();
-         /*
-         * Perform some validation here.
-         */
-         $.post("http://localhost:3000/login",{email:email,pass:pass},function(data){
-             if(data==='done')
-             {
-                 window.location.href="/admin";
-             }
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>MakersBnB</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){
+         var email,pass;
+         $("#submit").click(function(){
+             email=$("#email").val();
+             pass=$("#password").val();
+             /*
+             * Perform some validation here.
+             */
+             $.post("http://localhost:3000/login",{email:email,pass:pass},function(data){
+                 if(data==='done')
+                 {
+                     window.location.href="/admin";
+                 }
+             });
          });
      });
- });
- </script>
- </head>
+     </script>
+   </head>
 
   <body>
     <div class="row">
       <div class="col-md-8 quarter">
-        <h1 class="jumbotron" style="font-size: 4em; text-align: center;">Prepare to be <br>amazed!</h1>
+        <h1 class="jumbotron" style="font-size: 4em; text-align: center; opacity: 0.6">Prepare to be <br>amazed!</h1>
       </div>
       <div class="col-md-8 quarter">
         <a class="btn btn-default btn-lg btn-info center-block" href="/listings" role="button" style="display: block; width: 10%;">Listings</a><br>
@@ -49,3 +42,26 @@
     </div>
   </body>
 </html>
+
+<style media="screen">
+
+  body {
+    background: url(https://static1.squarespace.com/static/55055a25e4b0e08b688db3d3/t/57cd8543d2b857343fdb8a04/1473086804160/?format=1000w) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .main-content {
+    position: absolute;
+
+  }
+
+  .content-left {
+    float: left;
+  }
+
+  .content-right {
+    float: right;
+    border-color: #bcb2b2;
+  }
+
+</style>
