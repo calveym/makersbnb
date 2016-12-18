@@ -1,4 +1,20 @@
-##Makers bnb
+#Makers bnb
+Makersbnb is a functionality clone of airbnb. It allows users to rent out their
+properties. This web app was created over the course of 5 days, and it was
+created following agile developer practices.
+
+## Techonologies
+This project runs on the following tech stack:
+- Node.js
+- Express.js
+- Postgres
+- Sequelize
+- EJS
+- Jasmine
+
+
+
+
 This is a web application that allows users to rent out properties.
 
 ```
